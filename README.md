@@ -7,4 +7,4 @@
 
 | col 1      | col 2      |
 |------------|-------------|
-| ![Screenshot](Журнал.png) | ![Screenshot](Детали журнала.png)|
+![Screenshot](Детали журнала.png)| ![Screenshot](Журнал.png) | 
