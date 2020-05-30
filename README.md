@@ -1,4 +1,4 @@
 Скриншоты
 
-![Screenshot](расписание.png)
+![Screenshot](Расписание.png)
 
