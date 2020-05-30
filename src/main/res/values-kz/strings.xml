@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">SU</string>
+    <string name="performance">Үлгерім</string>
+
+    <string name="title_journal">Журнал</string>
+    <string name="title_evaluation">Бағалар</string>
+
+
+    <string name="lesson_title">Название предмета</string>
+    <string name="point">Оценка</string>
+    <string name="pass">Кол.Пропусков</string>
+    <string name="tutor_name">Имя учителя</string>
+
+
+    <string name="student_name">Аты-жөні</string>
+
+    <string name="title_settings">Параметрлері</string>
+    <string name='change_language'>Тілді таңдау</string>
+    <string name='error_feedback'>Қате туралы хабарлау </string>
+
+
+
+    <string name="exit">Шығу</string>
+
+
+    <string-array name="languages">
+        <item name="kz">Казақ тілі</item>
+        <item name="ru">Русский язык</item>
+    </string-array>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="journal_title_transition">title %d</string>
+</resources>

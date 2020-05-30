@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_journal"
+        android:icon="@drawable/list"
+        android:title="@string/title_journal" />
+
+    <item
+        android:id="@+id/navigation_schedule"
+        android:icon="@drawable/event"
+        android:title="Расписание" />
+
+    <item
+        android:id="@+id/navigation_evaluation"
+        android:icon="@drawable/grade"
+        android:title="@string/title_evaluation" />
+
+    <item
+        android:id="@+id/navigation_notifications"
+        android:icon="@drawable/notification"
+        android:title="Уведомления" />
+</menu>

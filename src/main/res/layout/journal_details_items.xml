@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <data>
+        <variable
+            name="date"
+            type="su.app.repository.model.journal.Dates"
+            />
+    </data>
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/grade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:text="@{`P=` + date.grade}"
+            android:textColor="@{date.grade>0 ? @color/textColor : @color/textColorSecondary}"
+            app:fontFamily="@font/roboto_medium" />
+        <ImageView
+            android:id="@+id/attendance_img"
+            android:layout_width="40dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="2dp"
+            android:layout_height="40dp"
+            android:scaleType="fitXY"
+            android:src="@{date.attended ? @drawable/att_true : @drawable/att_false}" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{date.date}"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+</layout>

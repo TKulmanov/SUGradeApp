@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="semester"
+            type="su.app.repository.model.evaluation.transcript.Semester"
+            />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/transcript_dialog_bg">
+
+        <TextView
+            android:id="@+id/semester_credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="Кредиты за семестр/ECTS:"
+            android:textColor="@color/textColorLight"
+            app:layout_constraintBottom_toTopOf="@+id/semester_confirmed_credits"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@{` `+semester.semesterCredits + `/` + semester.semesterEcts}"
+            android:textColor="@color/textColorLight"
+            app:layout_constraintBottom_toBottomOf="@+id/semester_credits"
+            app:layout_constraintStart_toEndOf="@+id/semester_credits"
+            app:layout_constraintTop_toTopOf="@+id/semester_credits" />
+
+        <TextView
+            android:id="@+id/semester_confirmed_credits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@{`Засчитано кредитов: `+ semester.confirmedSemesterCredits}"
+            android:textColor="@color/textColorLight"
+            app:layout_constraintBottom_toTopOf="@+id/semester_Gpa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/semester_credits" />
+
+        <TextView
+            android:id="@+id/semester_Gpa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@{`Семестровый GPA: `+semester.semesterGpa}"
+            android:textColor="@color/textColorLight"
+            app:layout_constraintBottom_toTopOf="@+id/year_Gpa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/semester_confirmed_credits" />
+
+        <TextView
+            android:id="@+id/year_Gpa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="@{`Годовой GPA: `+semester.yearGpa}"
+            android:textColor="@color/textColorLight"
+            app:layout_constraintBottom_toTopOf="@+id/cumulative_Gpa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/semester_Gpa" />
+
+        <TextView
+            android:id="@+id/cumulative_Gpa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="@{`Кумулятивный GPA: ` + semester.cumulativeGpa}"
+            android:textColor="@color/textColorLight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/year_Gpa" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

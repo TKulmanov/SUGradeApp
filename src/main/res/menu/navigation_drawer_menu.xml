@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+        <item
+        android:title="Успеваемость"
+        android:id="@+id/navigation_journal" />
+        <item
+        android:title="УМКД"
+        android:id="@+id/navigation_umkd" />
+        <item
+        android:title="Настройки"
+        android:id="@+id/navigation_settings" />
+        <item android:title="Выйти"
+            android:id="@+id/navigation_exit"/>
+</menu>

@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">SU</string>
+
+    <string name="performance">Успеваемость</string>
+
+    <string name="title_journal">Журнал</string>
+    <string name="title_evaluation">Оценки</string>
+
+
+    <string name="lesson_title">Название предмета</string>
+    <string name="point">Оценка</string>
+    <string name="pass">Кол.Пропусков</string>
+    <string name="tutor_name">Имя учителя</string>
+
+
+    <string name="student_name">Имя студента</string>
+
+    <string name="title_settings">Настройки</string>
+    <string name='change_language'>Выбрать язык</string>
+    <string name='error_feedback'>Сообщить об ошибке</string>
+
+
+    <string name="exit">Выйти</string>
+
+
+    <string-array name="languages">
+        <item name="kz">Казахский язык</item>
+        <item name="ru">Русский язык</item>
+    </string-array>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="journal_title_transition">title %d</string>
+</resources>

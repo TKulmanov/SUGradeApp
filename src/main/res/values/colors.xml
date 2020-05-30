@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4C66AB</color>
+    <color name="darkBlue">#2E3F72</color>
+    <color name="backgroundColor">#FFFFFF</color>
+
+    <color name="buttonColor">#6A67B5</color>
+
+    <color name="textColorLight">#FFFFFF</color>
+    <color name="textColor">#202020</color>
+    <color name="textColorSecondary">#838383</color>
+
+    <color name="attTrue">#E7F8F6</color>
+    <color name="attFalse">#faf4f2</color>
+
+    <array name="schedule_color">
+        <item>#73FFC162</item>
+        <item>#73FFCA6F</item>
+        <item>#73FFA96F</item>
+        <item>#73FFA16F</item>
+        <item>#73FF986F</item>
+        <item>#73FDB1A4</item>
+        <item>#73FFA085</item>
+        <item>#73FFC9AC</item>
+        <item>#73FFB3A5</item>
+        <item>#73FAB1AC</item>
+        <item>#73FF9999</item>
+        <item>#73B9CBFC</item>
+        <item>#73A7A9FF</item>
+        <item>#73B8B4FF</item>
+        <item>#73D9C1FF</item>
+    </array>
+
+    <array name="exam_text_color">
+        <item>#FF9E80</item>
+        <item>#FFD180</item>
+        <item>#3F51B5</item>
+        <item>#9C27B0</item>
+        <item>#673AB7</item>
+        <item>#8BC34A</item>
+        <item>#03A9F4</item>
+        <item>#E91E63</item>
+        <item>#80D8FF</item>
+        <item>#82B1FF</item>
+        <item>#8C9EFF</item>
+        <item>#B388FF</item>
+    </array>
+
+    <array name="exam_color">
+        <item>#80FFE082</item>
+        <item>#809FA8DA</item>
+        <item>#80FFE082</item>
+        <item>#80B39DDB</item>
+        <item>#80F48FB1</item>
+        <item>#80FFAB91</item>
+        <item>#80EF9A9A</item>
+        <item>#80C5E1A5</item>
+        <item>#8080CBC4</item>
+        <item>#8080DEEA</item>
+        <item>#809FA8DA</item>
+        <item>#80E6EE9C</item>
+    </array>
+
+    <color name="red_date">#FF5656</color>
+
+
+<!--    <color name="colorPrimary">#008577</color>-->
+<!--    <color name="colorPrimaryDark">#00574B</color>-->
+<!--    <color name="colorAccent">#D81B60</color>-->
+</resources>

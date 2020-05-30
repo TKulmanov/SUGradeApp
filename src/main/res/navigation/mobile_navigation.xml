@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_journal">
+
+    <fragment
+        android:id="@+id/navigation_journal"
+        android:name="su.app.presentation.ui.journal.list.JournalFragment"
+        android:label="@string/title_journal"
+        tools:layout="@layout/journal_fragments" >
+        <action
+            android:id="@+id/journalDetails"
+            app:destination="@id/navigation_journal_details" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_journal_details"
+        android:name="su.app.presentation.ui.journal.details.JournalDetailsFragment"
+        android:label="@string/title_journal"
+        tools:layout="@layout/journal_fragments">
+        <argument
+            android:name="dates"
+            app:argType="su.app.repository.model.journal.Journal"
+            />
+        <action
+            android:id="@+id/backToJournal"
+            app:destination="@id/navigation_journal" />
+    </fragment>
+
+   <fragment
+       android:id="@+id/navigation_schedule"
+       android:name="su.app.presentation.ui.schedule.ScheduleViewFragment"
+       android:label="Расписание"
+       tools:layout="@layout/schedule_view_fragment"/>
+
+    <fragment
+        android:id="@+id/navigation_evaluation"
+        android:name="su.app.presentation.ui.evaluation.EvaluationFragment"
+        android:label="@string/title_evaluation"
+        tools:layout="@layout/evaluation_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="su.app.presentation.ui.notification.NewsFragment"
+        android:label="Уведомления"
+        tools:layout="@layout/news_fragment" />
+
+    <fragment
+        android:id="@+id/navigation_umkd"
+        android:name="su.app.presentation.ui.umkd.UmkdFragment"
+        android:label="УМКД"
+        tools:layout="@layout/umkd_fragment">
+        <action
+            android:id="@+id/categories"
+            app:destination="@id/navigation_categories" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_categories"
+        android:name="su.app.presentation.ui.umkd.category.CategoryFragment"
+        android:label="Файлы"
+        tools:layout="@layout/category_fragment">
+        <argument
+            android:name="disciplineId"
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/toFiles"
+            app:destination="@+id/navigation_files"/>
+        <action
+            android:id="@+id/backToDisciplines"
+            app:destination="@id/navigation_umkd" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_files"
+        android:name="su.app.presentation.ui.umkd.file.list.FileFragment"
+        android:label="Файлы"
+        tools:layout="@layout/file_fragment"
+        >
+        <argument
+            android:name="category"
+            app:argType="su.app.repository.model.umkd.Category"
+            />
+        <action
+            android:id="@+id/toFile"
+            app:destination="@+id/navigation_file"
+            />
+        <action
+            android:id="@+id/backToFiles"
+            app:destination="@+id/navigation_categories"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_file"
+        android:name="su.app.presentation.ui.umkd.file.detail.FileDetailFragment"
+        android:label="Файл"
+        tools:layout="@layout/file_details_fragment">
+        <argument
+            android:name="file"
+            app:argType="su.app.repository.model.umkd.File"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="su.app.presentation.ui.settings.SettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/settings_fragment" />
+
+
+</navigation>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="schedule"
+            type="su.app.repository.model.schedule.Schedule" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/schedule_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:text="@{schedule.lessonStart + `-` + schedule.lessonEnd}"
+            android:textSize="11sp"
+            app:layout_constraintBottom_toBottomOf="@+id/schedule_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/schedule_title" />
+
+        <TextView
+            android:id="@+id/schedule_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:text="@{schedule.lessonTitle}"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/schedule_lesson_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/time"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/schedule_lesson_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@{schedule.lessonTutor  + (schedule.lessonType.length() != 0 ? ( ` (` + schedule.lessonType + `)` ) :  `` )}"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/schedule_title"
+            app:layout_constraintTop_toBottomOf="@id/schedule_title" />
+
+        <TextView
+            android:id="@+id/schedule_room"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:text="@{schedule.lessonBuilding + ` `+ schedule.lessonClass}"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/schedule_lesson_type"
+            app:layout_constraintTop_toBottomOf="@id/schedule_lesson_type" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
